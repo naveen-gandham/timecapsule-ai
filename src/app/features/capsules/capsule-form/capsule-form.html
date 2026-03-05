@@ -1,0 +1,25 @@
+<div class="card">
+
+<h3>Create Capsule</h3>
+
+<form [formGroup]="form" (ngSubmit)="save()">
+
+<input formControlName="title" placeholder="Title">
+
+<textarea rows="3"
+formControlName="message"
+placeholder="Message"></textarea>
+
+<input type="date" formControlName="unlockDate">
+
+<select formControlName="mood">
+  <option value="happy">😊 Happy</option>
+  <option value="sad">😔 Sad</option>
+  <option value="motivated">🔥 Motivated</option>
+</select>
+
+<button>Create Capsule</button>
+
+</form>
+
+</div>

@@ -1,0 +1,14 @@
+<div *ngFor="let msg of conversation">
+
+  <div *ngIf="msg.role==='user'" class="user">
+    {{msg.text}}
+  </div>
+
+  <div *ngIf="msg.role==='ai'" class="ai" [typing]="msg.text"></div>
+
+</div>
+
+<div class="chat-input">
+  <input [(ngModel)]="message" placeholder="Ask your future self..." />
+  <button (click)="send()">Send</button>
+</div>

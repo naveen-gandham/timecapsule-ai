@@ -1,0 +1,17 @@
+<div class="card"
+     [ngClass]="moodClass()"
+     appGlow>
+
+<h3>{{capsule.title}}</h3>
+
+<p *ngIf="capsule.opened">
+ {{capsule.message}}
+</p>
+
+<p *ngIf="!capsule.opened">
+ ⏳ {{countdown$ | async}}
+</p>
+
+<button (click)="delete()">Delete</button>
+
+</div>

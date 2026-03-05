@@ -1,0 +1,11 @@
+<app-capsule-form></app-capsule-form>
+
+<div style="margin-top:20px"
+     *ngFor="let c of capsules$ | async">
+
+  <app-capsule-card
+     [capsule]="c"
+     (remove)="remove($event)">
+  </app-capsule-card>
+
+</div>
